@@ -1,8 +1,8 @@
-var express = require("express");
-var app = express();
-var Razorpay = require("razorpay");
-var bodyParser = require('body-parser')
-var crypto = require("crypto");
+const express = require("express");
+const app = express();
+const Razorpay = require("razorpay");
+const bodyParser = require('body-parser')
+const crypto = require("crypto");
 
 
 let instance = new Razorpay({
@@ -52,7 +52,10 @@ app.get("/:pageName", (req,res)=> {
 
 
 
-
-app.listen("3000", () => {
-    console.log("server running at port 3000");
+let port = process.env.PORT;
+if(port == null || port =="") {
+    port = 3000;
+}
+app.listen(port, () => {
+    console.log("server running at port" + port);
 })
