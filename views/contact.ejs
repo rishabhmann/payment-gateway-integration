@@ -1,0 +1,42 @@
+<%- include("partials/header") -%>
+
+<div class="navbar">
+    <div class="navbar-brand">
+        <a href="/"><img class="logo" src="img/logo.jpeg" alt=""></a>
+    </div>
+
+    <div class="navbar-items">
+
+        <a href="/">HOME</a>
+        <a href="/about">ABOUT</a>
+        <a href="/contact">CONTACT</a>
+    </div>
+</div>
+
+<div class="contact-container">
+
+    <div class="contact-border">
+        <div class="contact-heading">
+            <h3> Contact Us</h3>
+        </div>
+    
+        <div  class="contact-form">
+            <form class="form-group" action="/contact" method="post"  >
+                <input id="nameForm" class="form-control" type="text" placeholder=" Your Name" name="yourName"> <br>
+                <input id="emailForm" class="form-control" type="email" placeholder=" Your Email" name="yourEmail" > <br>
+                <textarea class="form-control" id=""  placeholder="Your Message" name="yourMessage"  ></textarea>
+            
+                <button class="contact-button" type="submit" onclick="alertMessage()" >Send Message</button>
+            
+            </form>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+<script src="js/index.js"></script>
+
+
+<%- include("partials/footer") -%>
