@@ -4,12 +4,6 @@ const Razorpay = require("razorpay");
 const bodyParser = require('body-parser')
 const crypto = require("crypto");
 
-
-let instance = new Razorpay({
-    key_id: 'rzp_test_uf3sjftXUE3AjG', // your `KEY_ID`
-    key_secret: 'RSdOmmzgbOHeCOvbBoaaJ9nR' // your `KEY_SECRET`
-})
-
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.json());
